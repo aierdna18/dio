@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+
+*{
+    font-family: 'Abel';
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+button{
+    border: 1px solid goldenrod; 
+    padding: 5px;
+    border-radius: 5px;
+    background-color: rgb(227, 248, 255);
+    color: rgb(105, 197, 255);
+    text-align: center;
+}
+
+input[type="text"]{
+    border: 1px solid black;
+    padding: 5px;
+    border-radius: 5px;    
+}
+
+#tasks {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+#task-inpur{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+:checked + label{
+    text-decoration: none;
+    color: gray;
+}
+
+
+  

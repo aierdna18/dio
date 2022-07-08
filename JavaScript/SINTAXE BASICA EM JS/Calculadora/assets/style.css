@@ -1,0 +1,62 @@
+*{
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after{
+    box-sizing: inherit;
+}
+
+body{
+    /* height: 500px; */
+    width: 600px;
+    flex-direction: column;
+    
+}
+h1{
+    text-align: center;
+}
+
+input,
+textarea,
+button{
+    border: 0;
+    border-radius: 0;
+    background-color: transparent;
+    font-size: inherit;
+    font-family: inherit;
+    font-weight: inherit;
+    outline: none;
+    appearance: none;
+    text-align: left;
+}
+#display{
+    background-color: #999;
+    color: #fff;
+    font-size: 1.714em;
+    padding: 0.5em 0.75em;
+    text-align: right;
+}
+
+#keys{
+    background-color: #999;
+    display: grid;
+    grid-gap: 1px;
+    grid-template-columns: repeat(4,1fr);
+}
+
+#keys > * {
+    background-color: #fff;
+    border: 1px solid #d3d0d0;
+    padding: 0.5em 1.25em;
+    position: relative;
+    text-align: center;
+
+}
+#soma{
+    background-color: rgb(203, 231, 231); 
+}
+#clean{
+    background-color: #fcd6a4;
+}

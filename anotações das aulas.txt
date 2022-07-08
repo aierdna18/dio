@@ -1,0 +1,237 @@
+duvidas:
+
+rest em js
+
+
+error do ECMASCRIPT
+ACONTECE EM TEMPO DE EXCECUÇÃO
+	VAR SEM DECLARADA
+	FALTOU ALGUM PONTO E VIRGULA, EST
+	COMPOSTO POR :
+		MENSAGEM
+		NOME
+		LINHA
+		CALL STACK
+
+
+DOMEXCEPTION
+EXCEÇÃO DO DOCUMENTO OBECTJ MODEL
+	RELACIONANDO O CODIGO A UMA PAGINA QUE ESTA CONSUMINDO OS DADOS
+	ERROS DE ESTRUTURA
+
+
+TRATANO ERROS
+trhow
+	
+
+return
+
+
+try 
+
+catch
+	captura e permite manipular o erro	
+finally
+	é excecutado apos o try .. catch obrigatoriamente
+
+o objeto ERRO
+new Error(message, fileName, lineNumber)
+const MeuErro = new Error('Mensaem Inválida');
+
+MeuErro.name = 'InvalidMessage';
+MeuErro.stcak(mostra a linha da pilha onde esta o erro)
+throw MeuErro;
+
+-------------------
+assincronicidade:
+que não ocorre ou não se afetiva ao mesmo tempo.
+
+O JAVASCRIPT FUNCIONA DE MANEIRA sincrona
+
+PROMISSE:(PROMESSA DE ALGO DE PODE ACONTECER OU NÃO)
+objeto de processamento assincrono
+	inicialmente seu valor é desconhecido. Pode então ser RESOLVIDA ou REJEITADA.
+		
+		RESOLVED
+		.then()
+
+ PENDING			PENDING
+pROMISSE			promisse
+		.catch()
+		REJECTED
+
+TEM 3 ESTADOS: PENDING, FULFILLED , REJECTED
+
+const MyPromise = new Promisse((resolved, reject) =>{
+	window.setTimeout(() => {
+	resolve('Resolvida')	;
+	},2000);
+});
+
+await myPromise
+	.then((result) => result + 'passando pelo then')
+	.then((result) => + 'e agora acabou!')
+	.cath((err) => console.log(err.message));
+
+//apos 2 segundos , retorna o valor.
+//"Resolvida passando pelo then e agora acabou!"
+
+------------
+Async/await
+
+javascript assincrono precisa dessas duas funções
+
+se quiser o resultado da Promise precisa utilizar o AWAIT
+
+
+pode utilizar o try...catch com as Promise
+
+-----------------------
+
+APIS(application programming interface)
+é uma forma de intermediar os resultados do backend com o que é apresentado no fron-end
+o acesso é por meio de urls
+
+JSON:JavaScript Object Notation
+é comum que as APIS retornem seus dados no formato .json, portanto é necessário tratar
+os dados ao recebê-los.
+
+{}bank.json(nome do arquivo)
+{"descriptin": "schema POST bank",
+ "type":"object",
+ "properties":{
+	"id":{
+		"type": "number",
+		"minimum": 0
+	},
+	"code":{
+		"type":"string"
+	},
+	"name":{
+		"type":"string"
+	}
+ }
+}
+
+------------
+
+método fetch
+sintaxe:
+
+fetch(url, options)
+	.then(response => response.json())
+	.then(json=> console.log(json))
+//retorna uma promisse
+//não esquecer de utilizar o AWAIT
+
+operaçôes no banco
+(POST,GET,PUT,DELETE,etc)
+
+----------------------
+paradigmas(formas de programar):
+
+imperative:(foco em como irá resolver os problemas)
+	Procedural, Orientada a objetos, Processamento paralelos
+declarative:(foco no que ira ser feito)
+	logica, funcional, dataflow, database
+
+programas sao objetos que possuem uma seria de propriedades
+PILARES DA OO
+	herança
+	polimorfismos
+	encapsulamento
+	abstração
+
+ABSTRAÇÃO:
+processo mental que consistem em isolar um aspecto determinado de um estado de coisas
+relaticamente complexo, a fim de simplificar a sua avaliaçao, classificação ou para 
+permitir a comunicaçao do mesmo
+(abstrair para simplificar ou generalizar mais)
+
+HERANÇA:
+O objeto filho herda propriedades e metodos do objeto pai.
+
+POLIMORFISMOS:
+o objeto pode herdar a mesma classe, mas se comportam de formas diferentes quanto sao
+invocados os metodos da classe pai.
+
+ENCAPSULAMENTO:
+cada classe tem propeidades e metods independentes do restante do codigo
+PROPRIEDADES E METODOS DEW UMA CLASSE DIZEM RESPEITO APENAS A ELA
+
+ ----------
+OOJS(JAVASCRIPT ORIENTADA A OBJETOS)
+
+PROTOTIPOS
+sao o esqueleto de todos os objetos
+todos os objetos javascript HERDAM propriedades e metodos dew um prototype.
+o obejto Object.prototype está no topo da cadeia.
+
+
+CLASSES
+não existem nativamente
+Syntatic sugas: uma sintaxe para facilitar a escritya
+a partir do ecmascrit 6
+são objetois e a herança se dá por prototipos
+sempre utliza o 'constructor'
+utiliza o get e set
+super(manda para a funcao pai os parametos do filho)
+makeSound sobrescreve 
+
+----------------------------
+MANIPULACAO DA DOM
+
+D.O.M.(DOCUMENT OBJECT MODEL)
+É um padrão de como ACESSAR E MODIFICAR OS ELEMENTOS HTML de uma pagina.
+
+B.O.M.(BROWSER OBJECT MODEL)
+tudo o que está dentro o obketo window.
+			window
+document     history	 location   screen	navigator
+
+METODOS 
+estrutura html:
+tags	id	classe
+
+document.getElementBy/identificador/('titulo');
+document.getElementBy/identificador/('titulo'[i]);//para arrays ou listas
+
+.querySelectorAll();//RETORNA UM ARRAY
+.querySelectorAll('li.opcao');//
+
+.createElement('elemtnet');// cria um novo elemento
+.removeChild('elemtnet'); // remove um elemento
+.appendChild('elemtnet'); // adiciona um elemento
+.replaceChild('new', 'old')/ // substitui um elemento
+
+CLASSES
+Element.classList
+elemeto.classList.add("classe") /// add a classe 
+elemento.classList.remove("classe") // remove a classe
+elemento.classList.toggle("classe") // adiciona a classe caso ela não faça parte da lista e remove ela caso faça.
+document.getElementsByTagName("p").style.color= "blue";//acesando diretamente o css de um elemento
+
+EVENTOS
+eventos de mouse: mouseover, mouseout
+eventos de clique: click, dbclick
+eventos de atuialização: change, loag
+
+acionando eventos
+botao.addEventListener("click", outraFuncao);
+<h1 onclick="mudaTexto(this)>"Clique aqui!"</h1>
+<script>
+	function mudaTexto(id){
+		id.innerHTML = "Mudei!";
+	}
+</script>
+
+selecionar o elemento <section id="sobre" class="fullScreen">
+document.querySelectorAll('#sobre .fullScreen');
+ 
+-------------------------
+
+
+
+
+
+
