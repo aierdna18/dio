@@ -1,0 +1,97 @@
+REACTSJS
+
+NPM INSTALADO(gerenciador de dependencias do javascript)
+gerenciador de pacotes do Node
+é uma biblioteca JavaScript para criar interfaces de usuário
+versão atual 16.8.6
+
+criado em 2011 por Jordan Walke
+baseado no XHP, um framework para criação de html no PHP;
+Utilizado no mural de noticias do Facebook
+
+2012 - passou a ser itilizado no instagram
+2013 anunciado liberacao para openSource na JSCON us
+2015 - react native
+para aplicacoes mobile
+2015 - uwp (universal windows plataform)
+para desktop
+
+REACT é uma BIBLIOTECA e nÃO um framework
+em 2019 era o segundo mais utilizado
+é uma linguagem DECLARATIVA
+é baseado em componentes
+(the new york times, instagram, netflix, etc
+
+-------
+
+react creat app
+react scripts
+task runner e bundler sizers
+
+JSX
+const element = <h1>Hello, World!</h1>
+linguagem de marcação
+
+React não separa as tecnologias colocando marcação em arquivos separados,
+e sim separa conceitos que mantém o codigo acoplado chamando-os de componentes
+não é obrigatorio a utilizazao do JSX
+
+Sintax Suggar para React.createElement
+
+o browser não interpreta o JSX, para isso é neessario um 
+TRANSPILADOR para que a aplicação possa entender o codigo. 
+o mais utilizado é o Babel
+é uma função onde tem que ter um retorno e um html
+
+para declaracao de uma class é utilizado a palavra className
+-----------------
+
+RENDERIZAÇÃO
+é a menor parte para cosntruir uma aplicacao
+
+react Dom - utilliza o virtual DOM(controla tudo que esta no DOM
+SOMENTE onde foi feita a alteração)
+
+REACT "pensa em como a interface deve ser a cada momento"
+
+COMPONENTES E PROPS
+função e classe;
+props;
+composicao de componentes;
+extracao de componentes
+
+ESTADO E CICLO DE VIDA
+Inicialização
+props e state
+toda vez ue uma prop ou state é alterado atualiza a pagina interia
+Montagem
+Atualização
+Desmontagem
+
+--------------------------------
+WEBPACK
+é um MODULE BUNDLER(é um arquivo final que 
+é um empacotador de modulos para aplicacoes JS
+)
+gerar bundler que sera utilizado no html e ECS5
+SUPORTE: fontes, css, imagens, html, js e plugins
+
+Configuração
+principais conceitos:
+
+entry - utilizando grafo, o webpack precisa de um ponto de entrada
+para buscar todos os modulos e dependencias
+output- é para determinar quais são os bundles que o webpack ira emitir
+loaders - épara permitir o webpack gerencie os arquivos que não são JS
+plugins - podem ser utilizados para otimizacao de pacotes, 
+minificação, injeção de scripts e muito mais
+mode - utilizaos para abordagem de configuracao zero. é possivel
+configurar os modulos como Production, Development ou None
+Production tras otimizações internas
+Development é executado com três plugins:
+UglyfyJsPlugin, ModuleConcatenationPlugin e NoEmitOnErrorPlugin
+
+
+-----
+EsLint
+

@@ -1,0 +1,70 @@
+SQL
+CREATE TABLE
+Tipos: INT, VARCHAR , DATETIME
+
+CREATE TABLE pessoas (
+	id INT NOT NULL PRIMARY KEY AUTOINCREMENT
+	nome VARCHAR(30) NOT NULL,
+ 	nascimento DATE
+)
+
+INSERT INTO pessoas(nome, nascimento) VALUES
+('Andreia','1996 08 06')
+
+SELECT * FROM pessoas
+SELECT nome FROM pessoas
+SELECT nascimento FROM pessoas
+
+UPDATE pessoas SET nome ="Andreia Fernandes"
+UPDATE pessoas SET nome ="Andreia Fernandes" WHERE id=1;
+
+SELECT * FROM pessoas WHERE id=5;
+
+DELET FROM pessoas WHERE id=5;
+
+(ordenação crecente)
+SELECT * FROM pessoas ORDER BY name;
+
+(ordenação DECRESCENTE)
+SELECT * FROM pessoas ORDER BY name DESC;
+
+(agrupa as informações de acordo com o criterio sselecionado)
+SELECT COUNT(qtd) ,GENERO FROM pessoas GROUP BY genero
+
+ALTER TABLE 'pessoas' ADD 'genero' VARCHAR(1) NOT NULL AFTER 'nascimento';
+ALTER TABLE 'pessoas' ADD 'genero' VARCHAR(1) NOT NULL BEFORE 'nascimento';
+
+CLAUSULA JOIN
+por padra é INNER JOIN
+inner(não vai retornar nenhum valor que retorna null) 
+OUTER JOIN(vai retornar TODOS os valores que retorna null)
+left e right
+AS(apelida A TABELA)
+
+SELECT * FROM videos_canais AS vc JOIN videos AS v ON vc.fk_video = v.id_video
+retorna a tabela de videos e canais
+
+SELECT * FROM videos_canais AS vc JOIN videos AS v ON vc.fk_canal = v.id_video
+JOIN cansis AS C on vc.fk_canal = c.id_canal
+(retorna as 3 tabelas)
+
+SELECT v.nome_video, v.autor_video, c.nome_canal
+FROM videos_canais AS vc JOIN videos AS v ON vc.fk_canal = v.id_video
+JOIN cansis AS C on vc.fk_canal = c.id_canal
+(retorna somente os dados desejados da junção das 3 tabelas)
+
+SELECT * FROM videos_canais AS vc RIGHT OUTER JOIN videos AS v ON vc.fk_canal = v.id_video
+(retorna valores sem relacionamento a tabela a direita)
+
+
+SELECT v.id_video, v.nome_video FROM videos AS v LEFT OUTER JOIN videos_canais AS vC ON vc.fk_video = vc.fk_video
+UNION 
+SELECT c.id_canal, c.nome_canal FROM videos_canais AS VC RIGHT OUTER JOIN canais AS c ON vc.fk_canal = c.id_canal
+(retorna todos oa valores da juncao das tabelas)
+
+(UNION SO PODE SER UTILIZADO QUANDO O NUMERO DE COLUNAS FOR IGUAIS)
+
+CLAUSULA UNION
+unir varias consultas diferentes
+
+

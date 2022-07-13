@@ -1,0 +1,157 @@
+JAVA
+Criada na decada de 90, pela Sun Microsystems e posteriormente adquira  pela Oracle em 2018
+é uma linguagem interpretada
+é compilada em tempo de desenvolvimento para um bytecode, que é interpretado por uma 
+máquina virtual(JVM)
+
+PLATAFORMA X LINGUAGEM
+A LIINGUAGEM de programação Java é a linguagem convencional da PLATAFORMA JAVA, 
+mas não é a sua unica linguagem
+Groovy, Jython e JRuby sao outras linguagens
+	
+plataforma edições:
+
+JAVA SE(Java plataform STANDARD edition)
+JAVA EE(Java plataform ENTERPRISE edition)
+JAVA ME(Java plataform MICRO edition)(sistemas embarcados(calculadora, controle remoto, etc))
+
+FASES DA EXECUÇÃO:
+
+1. Escrever o codigo fonte(arquivo com a extensão .java)
+2. utilizar o JDK para compilar o codigo fonte e gerar o arquivo BYTECODE( extensão .class)
+3. para executat o programa a JVM lê o arquivo compilado(.class) e as bibliotecas padroes
+do java que estão no JRE
+
+JDK x JRE
+*JDK (JAVA DEVELOPMENT KIT) é o kit de DESENVOLVIMENTO JAVA responsável por compilar codigo-
+fonte em BYTECODE(.class)
+*JVM(JAVA VIRTUAL MACHINE) É A MAQUINA VIRTUAL DO JAVA responsavel por executar o BYTECODE(.class)
+*JRE(JAVA RUNTIME ENVIRONMENT) AMBIENTE DE EXECUÇÃO DO JAVA que fornece as bibliotecas padrões
+do java para o JDK compilar o codigo e para a JVM executar o seu programa
+
+VERSOES DO JAVA
+
+principal difença entre OpenJDK e JDK ORACLE:
+o OpenJDK é umjava totalmente open source com uma GNU GENERAL PUBLIC LICENSE e já o 
+JKD Oracle requer uma licensa comercial sobre o CONTRATO DE LICENÇA DE CODIGO BINARIO ORACLE
+
+Os lançamentos das versoes OpenJdK (suporte de longo prazo) acontecem pelo menos a cada 4 anos
+
+
+IDE é um software que combina ferramentas comuns de desenvolvimento em uma unica interface
+grafica do usuario (GUI) facilitando o desenvolvimento  de aplicações 
+
+V: "PUBLIC", "PROTECTED" e "PRIVATE"
+M:"STATIC" e "FINAL"
+T: tipo de dado
+N: nome que é fornecido a variavel
+VI: um valor inicial, caso se deseje
+
+
+TIPOS DE DADOS
+São os valores e consequentemente operações que as variaveis podem 
+assumir e sofre,respectivamente
+
+tipificão:
+ESTÁTICA(forte)(É quando uma linguagem obriga a ser definido o tipo
+da variavel no momento da criação) VS 
+DIANMICA(fraca)(não é obrigatorio a definicao do tipo pois durante a execução vai inferir e assumir o tipo)
+(lingueagems compiladas ou interpretada)
+PRIMITIVO(atomicos e homogenicos) VS COMPOSTO(são dados heterogenicos)
+
+NUMERAL, TEXTUAL, LOGICO E OBJETO
+
+byte: -128 a 127 => byte b = 15;
+short: -32.768 a 32.767=> short s = -15786;
+int: -2.147.483.648 a 2.147.483.647=> int i = 8515785;
+long:-9223.372.036.854.775.808 até 9223.372.036.854.775.807 => long l = 5938515784L;
+float: +-340282347E+38F => float f = 3.14...(f)
+double: +-1.79769313486231570E+308 => double d = 3.14(d);
+boolean: true ou false => boolean = false;
+STRING é um tipo de dado COMPOSTO => String texto = "palavra";
+char: '\u0000' //ou seja, somente 1 caractere ou deve colocar o codigo unicode
+
+CASTING(CONVERSÕES)
+É a transformação de uma determinada variavel de tipo menos especifico para um tipo mais especifico ou vice-versa;
+TIPOS
+Upcast(implicito)
+promocao de um dado
+Downcast(explicito)
+rebaixamento de um dado(pode ocasionar perda de dados)
+----------------
+MÉTODOS
+é uma porção do código(sub-rotina) que é disponibilizada por uma classe. Este é executado quando é feita uma requisição a ele. São responsáveis por definir e realizar um determinado comportamento.
+
+criação de MÉTODOS
+padrão:
+<?visibilidade?><?tipo?><?modificador?><?retorno?>
+nome (<?parâmetros?>) <?exeções?> corpo
+
+V: "PUBLIC", "PROTECTED" e "PRIVATE"
+T: concreto ou abstrato
+M: "STATIC" e "FINAL"
+R: tipo de dado ou "void"
+N: nome que é fornecido a variavel
+P: parâmetros que pode receber
+E: exeções que podem lançar
+C: códigoque possui ou vazio
+
+Método:
+public double carcularTotalVenda(double precoItem1, double precoItem2){}
+
+PARTICULARIDADES
+Assinatura: é a forma de identificar unicamente o metodo
+Ass = nome + parâmetros
+carcularTotalVenda(double precoItem1, double precoItem2);
+
+Construtor e Destrutor:
+()
+são metodos utilizados na Orientação a Objetos
+
+Mensagem:
+é o ato de solicitar ao metodo que o mesmo o execute. Esta pode ser direcionada a um objeto ou a uma classe.
+
+Passagem de referencia:
+por cópia(valor)
+por referência(endereço)
+
+SOBRECARGAS
+é a capacidade de definir metodos para diferentes contextos, mas preservando seu nome.
+o que diferncia é o tipo do parametro
+
+RETORNOS
+é uma instrução de interrupção de um método
+o tipo de retorno do método é definido na sua criação e pode ser um tipo primitivo ou objeto
+o tipo de dado do return deve ser compativel com o método
+se o método for sem retorno(void), pode ou não ter um "return" para encerrar sua função
+
+OPERADORES RELACIONAIS
+São simbolos especiais que são capazes de realizar comparações entre determinados operandos
+e em seguida retornar um resultado.
+Tipos:
+Similaridade: igual, diferente
+Tamanho: maior, maior igual, menor, menor igual
+System.out.printls("f1 é igual a f2 " + (f1 === f2));
+
+OPERADORES LÓGICOS
+Sao simbolos especiais quais sao capazes de realizar comparações lógicas entre os operadores
+lógicos ou expressões e em seguida retornar um resultado
+Tipos: Conjunção, Disjunção, Disjunção exclusiva, Negação
+
+não são operadores lógicos
+Operador bitwise: & e |
+Operador shift: ~ , >> , >>> , <<
+Operador ternário: 
+	condição? true: false
+	condição? true : null
+
+
+
+
+
+
+
+
+
+
+
